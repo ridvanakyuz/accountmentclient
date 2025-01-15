@@ -9,7 +9,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("https://accountment78.netlify.app/accounts")
+      .get("https://accountmentserver.netlify.app/accounts")
       .then((response) => {
         setAccounts(response.data);
         setLoading(false);
@@ -102,10 +102,16 @@ const App = () => {
     <div>
       <h1 style={{ textAlign: "center" }}>Hesap Raporu</h1>
 
-      <div style={{ display: "flex", justifyContent: "space-around" }}>
-        <div>
-          <h2>İlk üç kırılım</h2>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          flexWrap: "wrap", // Ensures the children wrap to the next line on small screens
+        }}
+      >
 
+        <div>
+          <h2>İlk Üç Kırılım</h2>
           <table border="1" cellPadding="10">
             <thead>
               <tr>
@@ -120,7 +126,7 @@ const App = () => {
         </div>
 
         <div>
-          <h2>İlk 5 kırılım</h2>
+          <h2>İlk Beş Kırılım</h2>
           <table border="1" cellPadding="10">
             <thead>
               <tr>
@@ -134,7 +140,7 @@ const App = () => {
           </table>
         </div>
         <div>
-          <h2>İlk 8 kırılım</h2>
+          <h2>İlk Sekiz Kırılım</h2>
           <table border="1" cellPadding="10">
             <thead>
               <tr>
